@@ -1,11 +1,12 @@
 {
-  "name": "tsep",
+  "name": "pudi",
   "version": "0.0.1",
-  "description": "express template with typescript",
+  "description": "pudi",
   "main": "dist/index.js",
   "scripts": {
     "clean": "ts-node tools/cleanDist",
     "copy-assets": "ts-node tools/copyAssets",
+    "initdb": "ts-node tools/initdb",
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "build": "npm run clean && tsc && npm run copy-assets",
     "prestart": "npm run build",
@@ -19,11 +20,18 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "ejs": "^2.7.1",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "fs-extra": "^8.1.0",
+    "pg": "^7.12.1",
+    "pg-promise": "^10.2.1"
   },
   "devDependencies": {
     "@types/express": "^4.17.2",
+    "@types/express-session": "^1.15.15",
+    "@types/fs-extra": "^8.0.1",
     "@types/node": "^12.12.7",
+    "@types/pg": "^7.11.2",
     "@types/shelljs": "^0.8.6",
     "nodemon": "^1.19.4",
     "shelljs": "^0.8.3",
