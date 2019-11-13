@@ -6,6 +6,7 @@
   "scripts": {
     "clean": "ts-node tools/cleanDist",
     "copy-assets": "ts-node tools/copyAssets",
+    "reinstall":"ts-node tools/removeNodeModules && npm install",
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "build": "npm run clean && tsc && npm run copy-assets",
     "prestart": "npm run build",
